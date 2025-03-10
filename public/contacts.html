@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grinfood - Про нас</title>
+  <title>Grinfood - Контакти</title>
   <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
+
 <header>
   <nav>
     <div class="header-content">
@@ -31,19 +33,36 @@
   </nav>
 </header>
 
-
-<main>
   <section>
-    <h1>Про нас</h1>
-    <p>Grinfood – це команда ентузіастів, що прагне зробити швидке харчування корисним і доступним. Ми розпочали свій шлях з невеликого бістро і тепер маємо мережу по всій країні.</p>
-    <p>Наша мета – надихати людей на здорове та смачне життя, пропонуючи швидку, але якісну їжу.</p>
-  </section>
+    <h2>Форма зворотного зв’язку</h2>
+    <form action="#" method="post">
+      <label for="name">Ім'я:</label>
+      <input type="text" id="name" name="name" required>
 
-  <section>
-    <h2>Наша історія</h2>
-    <article>
-      <p>Ідея створити Grinfood з’явилася, коли ми усвідомили, що на ринку бракує справді якісних та здорових страв швидкого приготування. З часом ми виросли і зараз продовжуємо розвивати нові напрямки.</p>
-    </article>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">Тема звернення:</label>
+      <select id="subject" name="subject">
+        <option value="question">Запитання</option>
+        <option value="feedback">Відгук</option>
+      </select>
+
+      <label for="message">Повідомлення:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <fieldset>
+        <legend>Чи хотіли б ви отримувати новини від нас?</legend>
+        <label>
+          <input type="radio" name="subscribe" value="yes" checked> Так
+        </label>
+        <label>
+          <input type="radio" name="subscribe" value="no"> Ні
+        </label>
+      </fieldset>
+
+      <button type="submit" class="btn">Відправити</button>
+    </form>
   </section>
 </main>
 <div id="cart" class="cart">
@@ -53,10 +72,19 @@
   <button onclick="clearCart()">Очистити кошик</button>
   <button onclick="checkout()">Оформити замовлення</button>
 </div>
+<button id="scrollTopBtn">⬆️ Вгору</button>
+
+<div class="theme-toggle">
+  <span>🌞</span>
+  <input type="checkbox" id="theme-switch">
+  <span>🌙</span>
+</div>
+
 <footer>
   <p>&copy; 2025 Grinfood. Всі права захищені.</p>
 </footer>
 
 <script src="js/script.js"></script>
+
 </body>
 </html>
