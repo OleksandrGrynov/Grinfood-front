@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grinfood - Про нас</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Стилі для карти */
+    .map-section {
+      text-align: center;
+      margin: 50px auto;
+      max-width: 800px;
+    }
+
+    .map-container {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="header-content">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Grinfood logo" class="logo">
+      </a>
+      <button class="cart-btn" onclick="toggleCart()">🛒 Кошик</button>
+
+      <div class="burger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html" id="home">Домашня</a></li>
+      <li><a href="about.html" id="about">Про нас</a></li>
+      <li><a href="services.html" id="services">Послуги</a></li>
+      <li><a href="menu.html" id="menu">Меню</a></li>
+      <li><a href="contacts.html" id="contacts">Контакти</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h1>Про нас</h1>
+    <p>Grinfood – це команда ентузіастів, що прагне зробити швидке харчування корисним і доступним. Ми розпочали свій шлях з невеликого бістро і тепер маємо мережу по всій країні.</p>
+    <p class="glow">Наша мета – надихати людей на здорове та смачне життя, пропонуючи швидку, але якісну їжу.</p>
+
+
+  </section>
+
+  <section class="map-section">
+    <h2>Наше розташування</h2>
+    <p>Ми знаходимося за адресою: <strong>Мікрорайон Виставка</strong></p>
+
+
+    <div class="map-container">
+      <div class="map-container fade-in">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.6560829971945!2d27.004306556263753!3d49.434315679788085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473207a94aae2929%3A0xd0a63b61424a334!2zTWlrcm9yYXlvbiBWeXN0YXZrYSwg0KXQvNC10LvRjNC90LjRhtC60LjQuSwg0KXQvNC10LvRjNC90LjRhtC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMjkwMDA!5e0!3m2!1sru!2sua!4v1741639176586!5m2!1sru!2sua"
+              allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <p><a href="https://goo.gl/maps/ZqG2yBhKM6LvC9wV7" target="_blank" class="map-btn">📍 Відкрити в Google Maps</a></p>
+
+    </div>
+    </div>
+  </section>
+  <section class="faq-section">
+    <h2>Популярні запитання</h2>
+    <div class="faq">
+      <button class="faq-question">Які години роботи? ▼</button>
+      <div class="faq-answer">Ми працюємо щодня з 10:00 до 21:00.</div>
+
+      <button class="faq-question">Чи є доставка? ▼</button>
+      <div class="faq-answer">Так, ми здійснюємо доставку протягом 1 години.</div>
+
+      <button class="faq-question">Як оплатити замовлення? ▼</button>
+      <div class="faq-answer">Оплата готівкою або онлайн при оформленні.</div>
+    </div>
+  </section>
+
+</main>
+
+<div id="cart" class="cart">
+  <h2>🛒 Ваш кошик</h2>
+  <ul id="cart-items"></ul>
+  <p><strong>Загальна сума: <span id="total-price">0</span> грн</strong></p>
+  <button onclick="clearCart()">Очистити кошик</button>
+  <button onclick="checkout()">Оформити замовлення</button>
+</div>
+<button id="scrollTopBtn">⬆️ Вгору</button>
+
+<div class="theme-toggle">
+  <span>🌞</span>
+  <input type="checkbox" id="theme-switch">
+  <span>🌙</span>
+</div>
+
+<p id="visit-counter"></p>
+
+<footer>
+  <p>&copy; 2025 Grinfood. Всі права захищені.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

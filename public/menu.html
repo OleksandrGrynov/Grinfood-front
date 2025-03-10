@@ -9,6 +9,7 @@
 <body>
 <header>
   <nav>
+
     <div class="header-content">
       <a href="index.html" class="logo-link">
         <img src="images/logo.png" alt="Grinfood logo" class="logo">
@@ -37,7 +38,13 @@
     <h1>Наше меню</h1>
     <p>Ознайомтеся з нашими смачними стравами швидкого приготування.</p>
   </section>
-
+  <input type="text" id="search" placeholder="🔍 Знайти страву...">
+  <ul id="menu-list">
+    <li>🍔 Бургер</li>
+    <li>🍕 Піца</li>
+    <li>🥗 Салат</li>
+    <li>🍰 Десерт</li>
+  </ul>
   <!-- Категорія: Бургери -->
   <section class="menu-category">
     <h2>🍔 Бургери</h2>
@@ -115,6 +122,14 @@
   <button onclick="clearCart()">Очистити кошик</button>
   <button onclick="checkout()">Оформити замовлення</button>
 </div>
+<button id="scrollTopBtn">⬆️ Вгору</button>
+
+<div class="theme-toggle">
+  <span>🌞</span>
+  <input type="checkbox" id="theme-switch">
+  <span>🌙</span>
+</div>
+
 
 <footer>
   <p>&copy; 2025 Grinfood. Всі права захищені.</p>
