@@ -3,7 +3,7 @@ let cart = [];
 let totalPrice = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("JavaScript завантажено!");
+
 
     // ==== БУРГЕРНЕ МЕНЮ ====
     const burgerMenu = document.querySelector(".burger-menu");
@@ -107,7 +107,7 @@ scrollTopBtn.addEventListener('click', () => {
 });
 
 // ====== СЛАЙДЕР ======
-var swiper = new Swiper(".mySwiper", {
+var Swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: true,
