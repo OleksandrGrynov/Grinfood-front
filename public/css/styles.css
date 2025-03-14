@@ -27,6 +27,8 @@ header {
     width: 100%;
     z-index: 1000;
     position: relative;
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 }
 
 
@@ -108,13 +110,20 @@ header {
 }
 @media (max-width: 768px) {
     h1 {
-        font-size: 22px;
+        font-size: clamp(24px, 5vw, 40px); /* Автоматичне масштабування */
+        text-align: left; /* Вирівнюємо зліва */
+        margin-bottom: 10px;
     }
     h2 {
-        font-size: 18px;
+        font-size: clamp(20px, 4vw, 32px);
+        text-align: left;
+        margin-bottom: 10px;
     }
     p {
-        font-size: 14px;
+        font-size: clamp(14px, 2.5vw, 18px);
+        text-align: left;
+        line-height: 1.6;
+        word-break: break-word;
     }
 }
 
@@ -276,6 +285,16 @@ button:hover {
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     list-style: none;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: white;
+    }
+
+    h1, h2, p {
+        color: white;
+    }
 }
 
 /* ====== ФОРМА ЗВОРОТНОГО ЗВ'ЯЗКУ ====== */
@@ -1116,4 +1135,31 @@ button:hover::before {
     padding: 15px;
     border-radius: 8px;
     display: none;
+}
+@media (max-width: 768px) {
+    main {
+        max-width: 95%;
+        padding: 15px; /* Зменшення внутрішнього відступу */
+    }
+
+    h1, h2 {
+        text-align: left; /* Вирівнюємо заголовки зліва */
+        margin-left: 10px; /* Додаємо відступ, щоб текст не притискався до краю */
+    }
+
+    p {
+        font-size: 14px; /* Менший розмір тексту на мобільних */
+        text-align: left;
+        margin-left: 10px;
+    }
+}
+main {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+    main {
+        word-break: break-word;
+    }
 }
