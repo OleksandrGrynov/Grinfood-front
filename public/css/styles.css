@@ -1,4 +1,3 @@
-/* ====== ГЛОБАЛЬНІ СТИЛІ ====== */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +16,7 @@ body {
 }
 
 
-/* ====== HEADER ====== */
+
 header {
     background: #2d2d2d;
     padding: 10px 0;
@@ -32,7 +31,7 @@ header {
 }
 
 
-/* Вирівнюємо контент у хедері */
+
 .header-content {
     display: flex;
     align-items: center;
@@ -42,7 +41,7 @@ header {
     padding: 10px 20px;
 }
 
-/* Логотип */
+
 .logo-link {
     display: flex;
     align-items: center;
@@ -61,7 +60,7 @@ header {
     transform: scale(1.1);
 }
 
-/* Кошик */
+
 .cart {
     display: none;
     position: fixed;
@@ -135,7 +134,7 @@ header {
 }
 
 
-/* НАВІГАЦІЯ */
+
 .nav-links {
     display: flex;
     gap: 20px;
@@ -157,7 +156,7 @@ header {
     color: #ff7849;
 }
 
-/* ГОЛОВНИЙ КОНТЕНТ */
+
 main {
     max-width: 80%;
 
@@ -169,7 +168,7 @@ main {
     text-align: center;
 }
 
-/* Картинки */
+
 .gallery {
     display: flex;
     justify-content: center;
@@ -216,7 +215,7 @@ main {
     color: gold;
 }
 
-/* КНОПКИ */
+
 button {
     background: linear-gradient(45deg, #ff7849, #ff4e50);
     color: #fff;
@@ -233,7 +232,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* АДАПТАЦІЯ ДЛЯ МОБІЛЬНИХ */
+
 @media (max-width: 480px) {
     .burger-menu {
         display: flex;
@@ -277,7 +276,7 @@ button:hover {
     }
 }
 
-/* ====== ДОДАТКОВИЙ ФОН ДЛЯ СЕКЦІЙ ====== */
+
 .section {
     padding: 50px;
     border-radius: 15px;
@@ -297,7 +296,7 @@ button:hover {
     }
 }
 
-/* ====== ФОРМА ЗВОРОТНОГО ЗВ'ЯЗКУ ====== */
+
 .contact-form {
     max-width: 600px;
     margin: auto;
@@ -327,7 +326,7 @@ button:hover {
     font-size: 16px;
 }
 
-/* ====== АНІМАЦІЯ ДЛЯ БЛОКІВ ====== */
+
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -345,7 +344,7 @@ button:hover {
     }
 }
 
-/* ====== ГАРНИЙ ЕФЕКТ ПРИ НАВЕДЕННІ НА НАПИСИ ====== */
+
 h1, h2, h3 {
     transition: color 0.3s ease-in-out;
 }
@@ -354,7 +353,7 @@ h1:hover, h2:hover, h3:hover {
     color: #ff7849;
 }
 
-/* ====== СЕКЦІЯ ГРАФІКУ РОБОТИ ====== */
+
 .work-schedule {
     text-align: center;
     padding: 30px;
@@ -363,7 +362,7 @@ h1:hover, h2:hover, h3:hover {
     margin-top: 30px;
 }
 
-/* ====== ФУТЕР ====== */
+
 footer {
     background: #333;
     color: white;
@@ -375,7 +374,7 @@ footer {
 }
 
 
-/* ====== ЕФЕКТИ НА ТЕКСТ ====== */
+
 @keyframes textBlink {
     0% { color: #ff5e62; }
     50% { color: #ff9966; }
@@ -386,7 +385,7 @@ footer {
     animation: textBlink 2s infinite;
 }
 
-/* ====== 3D-ЕФЕКТ ДЛЯ КАРТОЧОК ====== */
+
 .card {
     background: white;
     padding: 20px;
@@ -404,7 +403,7 @@ footer {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* ====== ВЕЛИКИЙ СЛАЙДЕР ====== */
+
 .big-slider {
     width: 100%;
     height: 400px;
@@ -417,7 +416,7 @@ footer {
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
-/* ====== КНОПКА ПРОКРУТКИ ВГОРУ ====== */
+
 .scroll-top {
     position: fixed;
     bottom: 20px;
@@ -460,7 +459,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* ====== РЕЙТИНГИ ТОВАРІВ ====== */
+
 .rating {
     display: flex;
     justify-content: center;
@@ -473,7 +472,7 @@ footer {
     margin: 0 2px;
 }
 
-/* ====== БЛОК ВІДГУКІВ ====== */
+
 .testimonials {
     display: flex;
     flex-wrap: wrap;
@@ -496,7 +495,7 @@ footer {
     font-style: italic;
 }
 
-/* ====== ДОДАНІ СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ ====== */
+
 .special-offers {
     text-align: center;
     padding: 40px;
@@ -519,7 +518,7 @@ footer {
     transform: scale(1.05);
 }
 
-/* ====== ФОРМА ОФОРМЛЕННЯ ЗАМОВЛЕННЯ ====== */
+
 .checkout-form {
     max-width: 500px;
     margin: auto;
@@ -554,7 +553,7 @@ footer {
     background: #ff1e2d;
 }
 
-/* ====== СПОВІЩЕННЯ ПРО АКЦІЇ ====== */
+
 .notification-banner {
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     text-align: center;
@@ -566,7 +565,7 @@ footer {
     margin-bottom: 20px;
 }
 
-/* ====== СПЕЦІАЛЬНИЙ ЕФЕКТ ДЛЯ ОФОРМЛЕННЯ ВІДГУКІВ ====== */
+
 .review-card {
     background: white;
     padding: 15px;
@@ -579,7 +578,7 @@ footer {
     transform: scale(1.03);
 }
 
-/* ====== ЛЕГКИЙ ЕФЕКТ НЕОНУ ДЛЯ КНОПОК ====== */
+
 .neon-button {
     display: inline-block;
     padding: 10px 20px;
@@ -598,7 +597,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* ====== ПІДКРЕСЛЕННЯ ПРИ НАВЕДЕННІ НА ЗАГОЛОВКИ ====== */
+
 h1, h2, h3 {
     position: relative;
 }
@@ -619,7 +618,7 @@ h1:hover::after, h2:hover::after, h3:hover::after {
     left: 0;
 }
 
-/* ====== ГРАДІЄНТНИЙ ФОН ДЛЯ ПРЕМІАЛЬНИХ ТОВАРІВ ====== */
+
 .premium-product {
     background: linear-gradient(135deg, #f8ffae, #43c6ac);
     padding: 15px;
@@ -627,7 +626,7 @@ h1:hover::after, h2:hover::after, h3:hover::after {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* ====== АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ====== */
+
 @media (max-width: 480px) {
     .testimonials {
         flex-direction: column;
@@ -648,12 +647,12 @@ h1:hover::after, h2:hover::after, h3:hover::after {
     }
 }
 
-/* ====== ПРОКРУТКА ВНИЗ З ПОВІЛЬНИМ ЕФЕКТОМ ====== */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* ====== СПОВІЩЕННЯ ПРО НОВІ ПРОДУКТИ ====== */
+
 .new-product-alert {
     background: linear-gradient(135deg, #ff758c, #ff7eb3);
     padding: 15px;
@@ -663,30 +662,30 @@ html {
     border-radius: 10px;
     margin-bottom: 20px;
 }
-/* ====== АДАПТИВНІСТЬ ДЛЯ ЗОБРАЖЕНЬ ====== */
+
 img {
-    max-width: 100%; /* Забезпечує, що зображення не виходять за межі батьківського контейнера */
-    height: auto; /* Зберігає пропорції зображення */
-    display: block; /* Вирівнює по центру */
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin: 0 auto;
 }
 
-/* ====== АДАПТИВНІСТЬ ДЛЯ КОНТЕЙНЕРІВ ІЗ ЗОБРАЖЕННЯМИ ====== */
+
 .image-container {
     width: 100%;
-    max-width: 1200px; /* Обмеження максимальної ширини */
+    max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden; /* Уникає виходу зображень за межі */
+    overflow: hidden;
 }
 
 .image-container img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Обрізає картинку без спотворення */
-    border-radius: 10px; /* Злегка округлює кути */
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-/* ====== ДОДАТКОВА АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ====== */
+
 @media (max-width: 480px) {
     .image-container {
         padding: 10px;
@@ -707,10 +706,10 @@ img {
     color: #ff7849;
     position: relative;
     list-style: none;
-    padding-bottom: 15px; /* Додає простір між текстом і лінією */
+    padding-bottom: 15px;
 }
 
-/* Червона лінія під заголовком */
+
 .section-title::after {
     content: "";
     position: absolute;
@@ -723,36 +722,36 @@ img {
     transform: translateX(-50%);
 }
 
-/* Відступ для картинок, щоб лінія не накладалася */
+
 .food-items {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px; /* Додає відступ між заголовком і фото */
+    margin-top: 20px;
 }
 
 .food-items img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px; /* Злегка округлює краї */
+    border-radius: 10px;
     display: block;
 }
 .parent-container {
     overflow: hidden;
 }
-/* Прибирає маркери списку */
+
 ul, ol {
     list-style: none;
     padding-left: 0;
 }
 
-/* Якщо маркери додаються через псевдоелементи */
+
 li::before, li::after {
     content: none !important;
 }
 
 
-/* Якщо вони йдуть в .section або .testimonials */
+
 .section ul, .section ol,
 .testimonials ul, .testimonials ol {
     list-style: none;
@@ -904,15 +903,15 @@ li::before, li::after {
 }
 
 .swiper {
-    width: 80%; /* Ширина всього слайдера */
+    width: 80%;
     height: auto;
 }
 
 .swiper-slide img {
-    width: 60%; /* Зменшена ширина фото */
-    max-height: 200px; /* Обмеження по висоті */
-    object-fit: cover; /* Обрізає зайві частини фото, зберігаючи пропорції */
-    border-radius: 10px; /* Закруглення кутів */
+    width: 60%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -1007,7 +1006,7 @@ body.dark-mode .cart-btn {
     color: #333;
 }
 
-/* Кнопка перемикання теми */
+
 #theme-toggle {
     position: fixed;
     top: 10px;
@@ -1139,16 +1138,16 @@ button:hover::before {
 @media (max-width: 768px) {
     main {
         max-width: 95%;
-        padding: 15px; /* Зменшення внутрішнього відступу */
+        padding: 15px;
     }
 
     h1, h2 {
-        text-align: left; /* Вирівнюємо заголовки зліва */
-        margin-left: 10px; /* Додаємо відступ, щоб текст не притискався до краю */
+        text-align: left;
+        margin-left: 10px;
     }
 
     p {
-        font-size: 14px; /* Менший розмір тексту на мобільних */
+        font-size: 14px;
         text-align: left;
         margin-left: 10px;
     }
@@ -1161,5 +1160,55 @@ main {
 @media (max-width: 480px) {
     main {
         word-break: break-word;
+    }
+}
+.burger-menu {
+    display: none; /* Ховаємо бургер на великих екранах */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.burger-menu .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Стилі для меню (приховане за замовчуванням) */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex; /* Показуємо бургер тільки на мобільних пристроях */
+    }
+
+    .nav-links {
+        display: none; /* Ховаємо стандартне меню */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.9);
+        width: 220px;
+        padding: 10px 0;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex; /* Показуємо меню при кліку */
     }
 }
