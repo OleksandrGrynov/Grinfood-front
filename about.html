@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grinfood - Про нас</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="public/css/styles.css">
   <style>
 
     .map-section {
@@ -32,7 +32,7 @@
   <nav>
     <div class="header-content">
       <a href="index.html" class="logo-link">
-        <img src="images/logo.png" alt="Grinfood logo" class="logo">
+        <img src="public/images/logo.png" alt="Grinfood logo" class="logo">
       </a>
       <button class="cart-btn" onclick="toggleCart()">🛒 Кошик</button>
 
@@ -94,19 +94,22 @@
 </main>
 
 <div id="cart" class="cart">
-  <h2>🛒 Ваш кошик</h2>
-  <ul id="cart-items"></ul>
-  <p><strong>Загальна сума: <span id="total-price">0</span> грн</strong></p>
-  <button onclick="clearCart()">Очистити кошик</button>
-  <button onclick="checkout()">Оформити замовлення</button>
-</div>
-<button id="scrollTopBtn">⬆️ Вгору</button>
+  <div class="cart-header">
+    <h2>🛒 Ваш кошик</h2>
+    <button class="cart-close" onclick="cart.toggleCart()">×</button>
 
-<div class="theme-toggle">
-  <span>🌞</span>
-  <input type="checkbox" id="theme-switch">
-  <span>🌙</span>
+  </div>
+  <ul id="cart-items"></ul>
+  <p class="cart-total"><strong>Загальна сума: <span id="total-price">0</span> грн</strong></p>
+  <div class="cart-actions">
+    <button onclick="clearCart()">Очистити кошик</button>
+    <button onclick="checkout()">Оформити замовлення</button>
+  </div>
 </div>
+
+<button id="scrollTopBtn"> ↑</button>
+
+
 
 <p id="visit-counter"></p>
 
@@ -114,6 +117,6 @@
   <p>&copy; 2025 Grinfood. Всі права захищені.</p>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="public/js/script.js"></script>
 </body>
 </html>
