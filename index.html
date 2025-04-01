@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grinfood - Домашня</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="public/css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +13,7 @@
   <nav>
     <div class="header-content">
       <a href="index.html" class="logo-link">
-        <img src="images/logo.png" alt="Grinfood logo" class="logo">
+        <img src="public/images/logo.png" alt="Grinfood logo" class="logo">
       </a>
       <button class="cart-btn">🛒 Кошик</button>
 
@@ -47,10 +47,10 @@
     <h2>Популярні страви</h2>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/chickenburger.jpg" alt="Бургер"></div>
-        <div class="swiper-slide"><img src="images/cola.jpg" alt="Напій"></div>
-        <div class="swiper-slide"><img src="images/fries.jpg" alt="Закуска"></div>
-        <div class="swiper-slide"><img src="images/chizkeyk.jpg" alt="Десерт"></div>
+        <div class="swiper-slide"><img src="public/images/chickenburger.jpg" alt="Бургер"></div>
+        <div class="swiper-slide"><img src="public/images/cola.jpg" alt="Напій"></div>
+        <div class="swiper-slide"><img src="public/images/fries.jpg" alt="Закуска"></div>
+        <div class="swiper-slide"><img src="public/images/chizkeyk.jpg" alt="Десерт"></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -98,21 +98,22 @@
 
 
 <div id="cart" class="cart">
-  <h2>🛒 Ваш кошик</h2>
+  <div class="cart-header">
+    <h2>🛒 Ваш кошик</h2>
+    <button class="cart-close" onclick="cart.toggleCart()">×</button>
+
+  </div>
   <ul id="cart-items"></ul>
-  <p><strong>Загальна сума: <span id="total-price">0</span> грн</strong></p>
-  <button onclick="clearCart()">Очистити кошик</button>
-  <button onclick="checkout()">Оформити замовлення</button>
+  <p class="cart-total"><strong>Загальна сума: <span id="total-price">0</span> грн</strong></p>
+  <div class="cart-actions">
+    <button onclick="clearCart()">Очистити кошик</button>
+    <button onclick="checkout()">Оформити замовлення</button>
+  </div>
 </div>
-<button id="scrollTopBtn">⬆️ Вгору</button>
 
-<div class="theme-toggle">
-  <span>🌞</span>
-  <input type="checkbox" id="theme-switch">
-  <span>🌙</span>
-  <button id="theme-toggle">🌙 / ☀️</button>
+<button id="scrollTopBtn">↑</button>
 
-</div>
+
 
 <div class="chat-widget">
   <button id="chat-btn">💬 Онлайн-чат</button>
@@ -130,6 +131,7 @@
   <p>&copy; 2025 Grinfood. Всі права захищені.</p>
 </footer>
 
-<script src="js/script.js"></script>
+
+<script src="public/js/script.js"></script>
 </body>
 </html>

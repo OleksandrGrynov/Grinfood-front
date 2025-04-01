@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grinfood - Послуги</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body>
 <header>
   <nav>
     <div class="header-content">
       <a href="index.html" class="logo-link">
-        <img src="images/logo.png" alt="Grinfood logo" class="logo">
+        <img src="public/images/logo.png" alt="Grinfood logo" class="logo">
       </a>
       <button class="cart-btn">🛒 Кошик</button>
       <div class="burger-menu" onclick="toggleMenu()">
@@ -36,10 +36,10 @@
     <h1>Наші послуги</h1>
     <p>Grinfood надає широкий спектр послуг у сфері швидкого харчування:</p>
     <ul>
-      <li>Приготування бургерів, салатів та десертів на замовлення</li>
-      <li>Доставка їжі додому або в офіс</li>
-      <li>Організація кейтерингу для заходів</li>
-      <li>Розробка індивідуального меню для клієнтів</li>
+      <p>Приготування бургерів, салатів та десертів на замовлення</p>
+      <p>Доставка їжі додому або в офіс</p>
+      <p>Організація кейтерингу для заходів</p>
+      <p>Розробка індивідуального меню для клієнтів</p>
     </ul>
   </section>
 
@@ -63,7 +63,7 @@
 
 <section class="services-cards">
   <div class="card">
-    <img src="images/icon-order.png" alt="Замовлення" class="card-icon">
+    <img src="public/images/icon-order.png" alt="Замовлення" class="card-icon">
     <h3>Оформлення замовлення</h3>
     <p>Зробити замовлення можна по номеру телефону:<br>
       <strong>(097) 444 40 04</strong><br>
@@ -72,7 +72,7 @@
   </div>
 
   <div class="card">
-    <img src="images/icon-clock.png" alt="Графік роботи" class="card-icon">
+    <img src="public/images/icon-clock.png" alt="Графік роботи" class="card-icon">
     <h3>Графік роботи</h3>
     <p>Замовлення приймаються з 10:00 до 20:30.<br>
       Доставка здійснюється протягом 1 години.<br>
@@ -81,13 +81,13 @@
   </div>
 
   <div class="card">
-    <img src="images/icon-delivery.png" alt="Доставка" class="card-icon">
+    <img src="public/images/icon-delivery.png" alt="Доставка" class="card-icon">
     <h3>Вартість доставки</h3>
     <p>Доставка — <strong>70 грн</strong></p>
   </div>
 
   <div class="card">
-    <img src="images/icon-phone.png" alt="Контроль якості" class="card-icon">
+    <img src="public/images/icon-phone.png" alt="Контроль якості" class="card-icon">
     <h3>Контроль якості</h3>
     <p>Контроль за свіжістю продуктів і послуг:<br>
       <strong>(097) 700 36 14</strong><br>
@@ -97,24 +97,27 @@
   </div>
 </section>
 <div id="cart" class="cart">
-  <h2>🛒 Ваш кошик</h2>
-  <ul id="cart-items"></ul>
-  <p><strong>Загальна сума: <span id="total-price">0</span> грн</strong></p>
-  <button onclick="clearCart()">Очистити кошик</button>
-  <button onclick="checkout()">Оформити замовлення</button>
-</div>
-<button id="scrollTopBtn">⬆️ Вгору</button>
+  <div class="cart-header">
+    <h2>🛒 Ваш кошик</h2>
+    <button class="cart-close" onclick="cart.toggleCart()">×</button>
 
-<div class="theme-toggle">
-  <span>🌞</span>
-  <input type="checkbox" id="theme-switch">
-  <span>🌙</span>
+  </div>
+  <ul id="cart-items"></ul>
+  <p class="cart-total"><strong>Загальна сума: <span id="total-price">0</span> грн</strong></p>
+  <div class="cart-actions">
+    <button onclick="clearCart()">Очистити кошик</button>
+    <button onclick="checkout()">Оформити замовлення</button>
+  </div>
 </div>
+
+<button id="scrollTopBtn">↑</button>
+
+
 
 <footer>
   <p>&copy; 2025 Grinfood. Всі права захищені.</p>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="public/js/script.js"></script>
 </body>
 </html>

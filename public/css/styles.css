@@ -12,12 +12,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: clamp(14px, 2vw, 18px); /* Додає адаптивність шрифту */
+    font-size: clamp(14px, 2vw, 18px);
 }
 
 
 
-header {
+    header {
     background: #2d2d2d;
     padding: 10px 0;
     display: flex;
@@ -50,7 +50,7 @@ header {
 }
 
 .logo-link img {
-    width: clamp(60px, 10vw, 100px); /* Динамічний розмір логотипу */
+    width: clamp(60px, 10vw, 100px);
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -66,7 +66,7 @@ header {
     position: fixed;
     right: 20px;
     top: 80px;
-    width: 280px; /* Менший розмір */
+    width: 280px;
     background: white;
     border: 1px solid #ccc;
     padding: 10px;
@@ -77,7 +77,7 @@ header {
 
 
 .cart.show {
-    display: block; /* Показати кошик при відкритті */
+    display: block;
 }
 
 .cart-btn {
@@ -90,13 +90,13 @@ header {
     border: none;
     padding: 10px 16px;
     cursor: pointer;
-    font-size: clamp(12px, 1.5vw, 16px); /* Автоматичний розмір */
+    font-size: clamp(12px, 1.5vw, 16px);
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(255, 100, 100, 0.3);
-    min-width: 110px; /* Мінімальна ширина */
-    max-width: 180px; /* Максимальна ширина */
-    white-space: nowrap; /* Запобігає переносу тексту */
+    min-width: 110px;
+    max-width: 180px;
+    white-space: nowrap;
     text-align: center;
 }
 
@@ -109,8 +109,8 @@ header {
 }
 @media (max-width: 768px) {
     h1 {
-        font-size: clamp(24px, 5vw, 40px); /* Автоматичне масштабування */
-        text-align: left; /* Вирівнюємо зліва */
+        font-size: clamp(24px, 5vw, 40px);
+        text-align: left;
         margin-bottom: 10px;
     }
     h2 {
@@ -177,7 +177,7 @@ main {
 }
 
 .gallery img {
-    width: clamp(180px, 40vw, 250px); /* Динамічний розмір */
+    width: clamp(180px, 40vw, 250px);
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -335,7 +335,7 @@ button:hover {
 
 @keyframes fadeIn {
     from {
-        opacity: 1;
+        opacity: 0;
         transform: translateY(30px);
     }
     to {
@@ -351,6 +351,243 @@ h1, h2, h3 {
 
 h1:hover, h2:hover, h3:hover {
     color: #ff7849;
+}
+.gallery {
+    display: flex;
+    justify-content: space-evenly; /* Розподілити елементи рівномірно */
+    gap: 20px;
+    flex-wrap: nowrap; /* Запобігає переходу елементів на новий рядок */
+    align-items: center; /* Вирівнює елементи по вертикалі */
+}
+
+.gallery figure {
+    text-align: center; /* Вирівнюємо підписи по центру */
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок при меншому розмірі екрану */
+        justify-content: center; /* Вирівнює елементи по центру */
+    }
+}
+.gallery img {
+    width: 250px; /* Встановлюємо фіксовану ширину */
+    height: 250px; /* Встановлюємо фіксовану висоту */
+    object-fit: cover; /* Зберігає пропорції зображення і не дозволяє йому спотворюватися */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        width: 180px; /* Зменшуємо розмір для мобільних пристроїв */
+        height: 180px;
+    }
+}
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок */
+    align-items: center; /* Вирівнює елементи по вертикалі */
+}
+
+.gallery img {
+    width: 100%; /* Забезпечує адаптивність зображень */
+    max-width: 250px; /* Встановлює максимальну ширину для зображень */
+    height: 250px; /* Фіксована висота */
+    object-fit: cover; /* Зберігає пропорції зображення */
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%;
+        max-width: 180px; /* Зменшуємо максимальний розмір для мобільних пристроїв */
+        height: 180px;
+    }
+}
+.gallery figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 350px;
+    width: 250px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery button {
+    width: 100%; /* Кнопка займає всю ширину контейнера */
+    padding: 10px 0; /* Встановлюємо висоту кнопки */
+    text-align: center; /* Вирівнюємо текст по центру */
+    border-radius: 5px; /* Закруглені кути кнопки */
+    background: linear-gradient(45deg, #ff7849, #ff4e50);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px; /* Відступ між зображенням і кнопкою */
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.gallery button:hover {
+    background: linear-gradient(45deg, #ff5a36, #ff1a1f);
+    transform: scale(1.05);
+}
+
+.gallery figcaption {
+    text-align: center;
+    margin-top: 10px; /* Відступ між підписом і кнопкою */
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        height: 180px;
+    }
+
+    .gallery figure {
+        width: 180px;
+    }
+
+    .gallery button {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+}
+main {
+    max-width: 90%; /* Збільшуємо максимальну ширину для більшого простору */
+    margin: 120px auto;
+    background: rgba(255, 255, 255, 0.95); /* Білий фон з трохи прозорим ефектом */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px; /* Додаємо відступи всередині */
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Дозволяє елементам переноситися */
+}
+
+.gallery figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Розподіляє простір між зображенням і кнопкою */
+    align-items: center;
+    width: 250px;
+    height: 400px; /* Збільшуємо висоту для більших відступів */
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery figcaption {
+    text-align: center;
+    margin-top: 15px; /* Додаємо більший відступ між зображенням і підписом */
+}
+
+.gallery button {
+    width: 100%;
+    height: 40px; /* Фіксована висота для кнопки */
+    text-align: center;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff7849, #ff4e50);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px; /* Збільшуємо відступ між підписом і кнопкою */
+    box-sizing: border-box;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.gallery button:hover {
+    background: linear-gradient(45deg, #ff5a36, #ff1a1f);
+    transform: scale(1.05);
+}
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Білий фон з прозорістю */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+    text-align: center;
+    color: #ff4e50;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Забезпечує правильний розмір з урахуванням відступів */
+}
+
+textarea {
+    resize: vertical; /* Дозволяє змінювати висоту поля вводу */
+}
+
+/* Вирівнювання радіо-кнопок на одному рівні */
+.radio-group {
+    display: flex;
+    gap: 15px; /* Відступи між кнопками */
+    align-items: center; /* Вирівнюємо по вертикалі */
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #ff7849, #ff4e50);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff5a36, #ff1a1f);
+}
+
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }
 
 
@@ -554,16 +791,7 @@ footer {
 }
 
 
-.notification-banner {
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    text-align: center;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
+
 
 
 .review-card {
@@ -744,20 +972,11 @@ ul, ol {
     list-style: none;
     padding-left: 0;
 }
-
-
-li::before, li::after {
-    content: none !important;
-}
-
-
-
 .section ul, .section ol,
 .testimonials ul, .testimonials ol {
     list-style: none;
     padding-left: 0;
 }
-
 .section-container {
     display: flex;
     align-items: center;
@@ -841,7 +1060,7 @@ li::before, li::after {
 
 @keyframes fadeIn {
     from {
-        opacity: 1;
+        opacity: 0;
         transform: translateY(30px);
     }
     to {
@@ -883,20 +1102,135 @@ li::before, li::after {
 #scrollTopBtn {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 20px;
     background: #ff4e50;
     color: white;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 100, 100, 0.3);
+    z-index: 9999;
     transition: transform 0.3s ease-in-out;
 }
 
 #scrollTopBtn:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    background: #ff1e2d;
 }
+.cart-toast {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 10000;
+}
+.cart-toast.show {
+    opacity: 1;
+}
+.cart {
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    width: 350px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    padding: 20px;
+    animation: slideIn 0.3s ease-out;
+}
+
+.cart.show {
+    display: block;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #ff4e50;
+}
+
+.cart-close {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #ff4e50;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background 0.2s ease-in-out;
+}
+
+.cart-close:hover {
+    background: #ffe5e5;
+}
+
+.cart-total {
+    margin: 15px 0;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+}
+
+.cart-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-actions button {
+    padding: 12px;
+    border: none;
+    background: linear-gradient(45deg, #ff7849, #ff4e50);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cart-actions button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(45deg, #ff5a36, #ff1e2d);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 .popular-dishes {
     text-align: center;
     margin-top: 50px;
@@ -1036,7 +1370,7 @@ h1, h2 {
     -webkit-text-fill-color: transparent;
 }
 button {
-    position: relative;
+
     overflow: hidden;
 }
 
@@ -1055,18 +1389,15 @@ button:hover::after {
     left: 100%;
 }
 .section {
-    opacity: 1;
     transform: translateY(20px);
     animation: fadeIn 1s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 1;
         transform: translateY(20px);
     }
     to {
-        opacity: 1;
         transform: translateY(0);
     }
 }
@@ -1162,40 +1493,44 @@ main {
         word-break: break-word;
     }
 }
-.burger-menu {
-    display: none; /* Ховаємо бургер на великих екранах */
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-}
-
-.burger-menu .bar {
-    width: 100%;
-    height: 4px;
-    background-color: #fff;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Стилі для меню (приховане за замовчуванням) */
+/* Базові стилі для меню */
 .nav-links {
     display: flex;
     gap: 20px;
     list-style: none;
 }
 
+/* Ховаємо бургер-меню на великих екранах */
+.burger-menu {
+    display: none;
+}
+
+/* Адаптивні стилі для мобільних пристроїв */
 @media (max-width: 768px) {
+
     .burger-menu {
-        display: flex; /* Показуємо бургер тільки на мобільних пристроях */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
     }
 
+    .burger-menu .bar {
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 5px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Ховаємо стандартне меню та робимо його мобільним */
     .nav-links {
-        display: none; /* Ховаємо стандартне меню */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -1208,7 +1543,8 @@ main {
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     }
 
+
     .nav-links.active {
-        display: flex; /* Показуємо меню при кліку */
+        display: flex;
     }
 }
