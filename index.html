@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grinfood - Домашня</title>
+  <link rel="stylesheet" href="public/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="header-content">
+      <a href="index.html" class="logo-link">
+        <img src="public/images/logo.png" alt="Grinfood logo" class="logo">
+      </a>
+      <button class="cart-btn">🛒 Кошик</button>
+
+      <div class="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html" id="home">Домашня</a></li>
+      <li><a href="about.html" id="about">Про нас</a></li>
+      <li><a href="services.html" id="services">Послуги</a></li>
+      <li><a href="menu.html" id="menu">Меню</a></li>
+      <li><a href="contacts.html" id="contacts">Контакти</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section id="hero">
+    <h1>Ласкаво просимо до Grinfood</h1>
+    <p>Мережа закладів швидкого харчування, де кожен знайде свій улюблений бургер, салат або десерт.</p>
+    <a href="services.html" class="btn">Дізнатися більше</a>
+  </section>
+
+
+  <section class="popular-dishes">
+    <h2>Популярні страви</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="public/images/chickenburger.jpg" alt="Бургер"></div>
+        <div class="swiper-slide"><img src="public/images/cola.jpg" alt="Напій"></div>
+        <div class="swiper-slide"><img src="public/images/fries.jpg" alt="Закуска"></div>
+        <div class="swiper-slide"><img src="public/images/chizkeyk.jpg" alt="Десерт"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+
+
+  <section>
+    <h2>Чому Grinfood?</h2>
+    <ul id="features-list">
+      <li><strong>Свіжі інгредієнти</strong>: Тільки найсвіжіші продукти.</li>
+      <li><strong>Швидка доставка</strong>: Ми цінуємо ваш час.</li>
+      <li><strong>Доступні ціни</strong>: Кожен може насолодитися якісною їжею.</li>
+    </ul>
+  </section>
+
+
+  <section class="testimonials">
+    <h2>Що кажуть клієнти?</h2>
+    <div class="review">
+      <p>“Це найкращі бургери, які я куштував!”</p>
+      <span>⭐⭐⭐⭐⭐</span>
+      <h4>Олександр П.</h4>
+    </div>
+    <div class="review">
+      <p>“Доставка швидка, їжа свіжа.”</p>
+      <span>⭐⭐⭐⭐⭐</span>
+      <h4>Марія І.</h4>
+    </div>
+  </section>
+
+
+  <section class="promo">
+    <h2>🔥 Спеціальна пропозиція!</h2>
+    <p>-20% на перше замовлення!</p>
+    <a href="menu.html" class="btn">Замовити зараз</a>
+  </section>
+
+
+  <section class="work-schedule">
+    <h2>Графік роботи</h2>
+    <p>🕒 Пн-Нд: 10:00 - 21:00</p>
+  </section>
+</main>
+
+
+<div id="cart" class="cart">
+  <div class="cart-header">
+    <h2>🛒 Ваш кошик</h2>
+    <button class="cart-close" onclick="cart.toggleCart()">×</button>
+
+  </div>
+  <ul id="cart-items"></ul>
+  <p class="cart-total"><strong>Загальна сума: <span id="total-price">0</span> грн</strong></p>
+  <div class="cart-actions">
+    <button onclick="clearCart()">Очистити кошик</button>
+    <button onclick="checkout()">Оформити замовлення</button>
+  </div>
+</div>
+
+<button id="scrollTopBtn">↑</button>
+
+
+
+<div class="chat-widget">
+  <button id="chat-btn">💬 Онлайн-чат</button>
+  <div class="chat-box" id="chat-box">
+    <p>Привіт! Як ми можемо допомогти?</p>
+    <input type="text" placeholder="Напишіть ваше запитання..." id="chat-input">
+  </div>
+</div>
+<div id="discount-popup">
+  <p>🎉 Спеціальна знижка 10% на перше замовлення!</p>
+  <button onclick="closePopup()">Закрити</button>
+</div>
+
+<footer>
+  <p>&copy; 2025 Grinfood. Всі права захищені.</p>
+</footer>
+
+
+<script src="public/js/script.js"></script>
+</body>
+</html>

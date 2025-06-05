@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grinfood - Контакти</title>
+  <link rel="stylesheet" href="public/css/styles.css">
+
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="header-content">
+      <a href="index.html" class="logo-link">
+        <img src="public/images/logo.png" alt="Grinfood logo" class="logo">
+      </a>
+
+      <div class="burger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html" id="home">Домашня</a></li>
+      <li><a href="about.html" id="about">Про нас</a></li>
+      <li><a href="services.html" id="services">Послуги</a></li>
+      <li><a href="menu.html" id="menu">Меню</a></li>
+      <li><a href="contacts.html" id="contacts">Контакти</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <section class = "contact-form">
+    <h2>Форма зворотного зв’язку</h2>
+    <form action="#" method="post">
+      <label for="name">Ім'я:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">Тема звернення:</label>
+      <select id="subject" name="subject">
+        <option value="question">Запитання</option>
+        <option value="feedback">Відгук</option>
+      </select>
+
+      <label for="message">Повідомлення:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <fieldset>
+        <legend>Чи хотіли б ви отримувати новини від нас?</legend>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="subscribe" value="yes"> Так
+          </label>
+          <label>
+            <input type="radio" name="subscribe" value="no"> Ні
+          </label>
+        </div>
+
+      </fieldset>
+
+      <button type="submit" class="btn">Відправити</button>
+    </form>
+  </section>
+</main>
+
+
+<button id="scrollTopBtn">↑</button>
+
+
+
+<footer>
+  <p>&copy; 2025 Grinfood. Всі права захищені.</p>
+</footer>
+
+<script src="public/js/script.js"></script>
+
+</body>
+</html>

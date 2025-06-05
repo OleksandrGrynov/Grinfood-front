@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grinfood - Меню</title>
+  <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+<header>
+  <nav>
+
+    <div class="header-content">
+      <a href="index.html" class="logo-link">
+        <img src="public/images/logo.png" alt="Grinfood logo" class="logo">
+      </a>
+      <button class="cart-btn">🛒 Кошик</button>
+      <div class="burger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html" id="home">Домашня</a></li>
+      <li><a href="about.html" id="about">Про нас</a></li>
+      <li><a href="services.html" id="services">Послуги</a></li>
+      <li><a href="menu.html" id="menu">Меню</a></li>
+      <li><a href="contacts.html" id="contacts">Контакти</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<main>
+  <section>
+    <h1>Наше меню</h1>
+    <p>Ознайомтеся з нашими смачними стравами швидкого приготування.</p>
+  </section>
+  <input type="text" id="search" placeholder="🔍 Знайти страву...">
+
+  <section id="menu-container"></section>  <!-- Контейнер для меню -->
+
+  <section class="menu-category">
+    <h2>🍔 Бургери</h2>
+    <div class="gallery">
+      <figure>
+        <img src="public/images/2kotlet.jpg" alt="Бургер з подвійною котлетою">
+        <figcaption>Фірмовий бургер з подвійною котлетою - 150 грн</figcaption>
+        <button onclick="addToCart('Бургер з подвійною котлетою', 150)">Додати в кошик</button>
+      </figure>
+      <figure>
+        <img src="public/images/cheeseburger.jpg" alt="Чізбургер">
+        <figcaption>Класичний Чізбургер - 120 грн</figcaption>
+        <button onclick="addToCart('Чізбургер', 120)">Додати в кошик</button>
+      </figure>
+    </div>
+  </section>
+
+
+  <section class="menu-category">
+    <h2>🍰 Десерти</h2>
+    <div class="gallery">
+      <figure>
+        <img src="public/images/chizkeyk.jpg" alt="Чізкейк з полуницею">
+        <figcaption>Ніжний чізкейк з полуницею - 90 грн</figcaption>
+        <button onclick="addToCart('Чізкейк', 90)">Додати в кошик</button>
+      </figure>
+      <figure>
+        <img src="public/images/donuts.jpg" alt="Пончик з глазур'ю">
+        <figcaption>Пончик з шоколадною глазур'ю - 50 грн</figcaption>
+        <button onclick="addToCart('Пончик', 50)">Додати в кошик</button>
+      </figure>
+    </div>
+  </section>
+
+
+  <section class="menu-category">
+    <h2>🥤 Напої</h2>
+    <div class="gallery">
+      <figure>
+        <img src="public/images/cola.jpg" alt="Кока-Кола">
+        <figcaption>Кока-Кола (0.5 л) - 50 грн</figcaption>
+        <button onclick="addToCart('Кока-Кола', 50)">Додати в кошик</button>
+      </figure>
+      <figure>
+        <img src="public/images/coffee.jpg" alt="Кава">
+        <figcaption>Ароматна кава - 70 грн</figcaption>
+        <button onclick="addToCart('Кава', 70)">Додати в кошик</button>
+      </figure>
+
+    </div>
+  </section>
+  <div id="cart-toast" class="cart-toast">🛒 Товар додано в кошик!</div>
+
+
+  <section class="menu-category">
+    <h2>🍟 Закуски</h2>
+    <div class="gallery">
+      <figure>
+        <img src="public/images/fries.jpg" alt="Картопля фрі">
+        <figcaption>Хрустка картопля фрі - 60 грн</figcaption>
+        <button onclick="addToCart('Картопля фрі', 60)">Додати в кошик</button>
+      </figure>
+      <figure>
+        <img src="public/images/nuggets.jpg" alt="Курячі нагетси">
+        <figcaption>Курячі нагетси - 80 грн</figcaption>
+        <button onclick="addToCart('Курячі нагетси', 80)">Додати в кошик</button>
+      </figure>
+    </div>
+  </section>
+</main>
+
+
+<div id="cart" class="cart">
+  <div class="cart-header">
+    <h2>🛒 Ваш кошик</h2>
+    <button class="cart-close" onclick="cart.toggleCart()">×</button>
+
+
+  </div>
+  <ul id="cart-items"></ul>
+  <p class="cart-total"><strong>Загальна сума: <span id="total-price">0</span> грн</strong></p>
+  <div class="cart-actions">
+    <button onclick="clearCart()">Очистити кошик</button>
+    <button onclick="checkout()">Оформити замовлення</button>
+  </div>
+</div>
+
+<button id="scrollTopBtn">↑</button>
+
+
+
+
+<footer>
+  <p>&copy; 2025 Grinfood. Всі права захищені.</p>
+</footer>
+
+
+<script src="https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js"></script>
+
+<script src="public/js/script.js"></script>
+</body>
+</html>

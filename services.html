@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grinfood - Послуги</title>
+  <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="header-content">
+      <a href="index.html" class="logo-link">
+        <img src="public/images/logo.png" alt="Grinfood logo" class="logo">
+      </a>
+      <button class="cart-btn">🛒 Кошик</button>
+      <div class="burger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html" id="home">Домашня</a></li>
+      <li><a href="about.html" id="about">Про нас</a></li>
+      <li><a href="services.html" id="services" class="active">Послуги</a></li>
+      <li><a href="menu.html" id="menu">Меню</a></li>
+      <li><a href="contacts.html" id="contacts">Контакти</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h1>Наші послуги</h1>
+    <p>Grinfood надає широкий спектр послуг у сфері швидкого харчування:</p>
+    <ul>
+      <p>Приготування бургерів, салатів та десертів на замовлення</p>
+      <p>Доставка їжі додому або в офіс</p>
+      <p>Організація кейтерингу для заходів</p>
+      <p>Розробка індивідуального меню для клієнтів</p>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Переваги співпраці з нами</h2>
+    <article>
+      <h3>Якісні продукти</h3>
+      <p>Ми ретельно добираємо постачальників, щоб гарантувати найкращу якість страв.</p>
+    </article>
+    <article>
+      <h3>Гнучкий графік</h3>
+      <p>Працюємо щодня без вихідних, щоб ви могли замовляти у зручний час.</p>
+    </article>
+    <article>
+      <h3>Індивідуальний підхід</h3>
+      <p>Пропонуємо можливість підлаштувати страви під ваші вподобання або дієтичні обмеження.</p>
+    </article>
+  </section>
+</main>
+
+
+<section class="services-cards">
+  <div class="card">
+    <img src="public/images/icon-order.png" alt="Замовлення" class="card-icon">
+    <h3>Оформлення замовлення</h3>
+    <p>Зробити замовлення можна по номеру телефону:<br>
+      <strong>(097) 444 40 04</strong><br>
+      <em>*Примітка: Указана філія по вул. Подільській, проспект Мира 65 (Арсен)</em>
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="public/images/icon-clock.png" alt="Графік роботи" class="card-icon">
+    <h3>Графік роботи</h3>
+    <p>Замовлення приймаються з 10:00 до 20:30.<br>
+      Доставка здійснюється протягом 1 години.<br>
+      Також ви можете зробити замовлення на конкретний час.
+    </p>
+  </div>
+
+  <div class="card">
+    <img src="public/images/icon-delivery.png" alt="Доставка" class="card-icon">
+    <h3>Вартість доставки</h3>
+    <p>Доставка — <strong>70 грн</strong></p>
+  </div>
+
+  <div class="card">
+    <img src="public/images/icon-phone.png" alt="Контроль якості" class="card-icon">
+    <h3>Контроль якості</h3>
+    <p>Контроль за свіжістю продуктів і послуг:<br>
+      <strong>(097) 700 36 14</strong><br>
+      Оплата проводиться готівкою або онлайн.<br>
+      Сума вказується у чеку, а також повідомляється перед доставкою.
+    </p>
+  </div>
+</section>
+<div id="cart" class="cart">
+  <div class="cart-header">
+    <h2>🛒 Ваш кошик</h2>
+    <button class="cart-close" onclick="cart.toggleCart()">×</button>
+
+  </div>
+  <ul id="cart-items"></ul>
+  <p class="cart-total"><strong>Загальна сума: <span id="total-price">0</span> грн</strong></p>
+  <div class="cart-actions">
+    <button onclick="clearCart()">Очистити кошик</button>
+    <button onclick="checkout()">Оформити замовлення</button>
+  </div>
+</div>
+
+<button id="scrollTopBtn">↑</button>
+
+
+
+<footer>
+  <p>&copy; 2025 Grinfood. Всі права захищені.</p>
+</footer>
+
+<script src="public/js/script.js"></script>
+</body>
+</html>
